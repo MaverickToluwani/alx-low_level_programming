@@ -14,6 +14,7 @@ for (d = 48; d < 58; d++)
 putchar(d);
 if (d != 57)
 putchar(',');
+putchar(' ');
 }
 
 putchar('\n');
