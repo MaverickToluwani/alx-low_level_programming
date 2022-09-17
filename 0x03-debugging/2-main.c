@@ -2,11 +2,11 @@
 #include "main.h"
 
 /**
-* main - prints the largest of 3 integers
+* largest_number - prints the largest of 3 integers
 * Return: 0
 */
 
-int main(void)
+int largest_number(int a, int b, int c)
 {
         int a, b, c;
         int largest;
