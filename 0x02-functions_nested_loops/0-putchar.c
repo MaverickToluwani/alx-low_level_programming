@@ -1,11 +1,21 @@
-#include <stdio.h>
+#include "main.h"
+
 /**
  * main - Entry point
- * program that prints out _putchar
+ * Standard libraries are not to be used
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	printf("_putchar\n");
+	char myVar[] = "_putchar";
+	int i = 0;
+
+	while (myVar[i] != '\0')
+	{
+		_putchar(myVar[i]);
+		i++;
+	}
+	_putchar('\n');
+
 	return (0);
 }
