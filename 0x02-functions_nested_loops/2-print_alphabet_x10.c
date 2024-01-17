@@ -1,23 +1,24 @@
 #include "main.h"
 
 /**
- * Displays alphabets in lowercase 10 times
+ * print_alphbet_x10 - Displays alphabets in lowercase 10 times
  */
 
 void print_alphabet_x10(void)
 {
-	char ch;
-	int i=0;
-	while (i < 10)
-	{
-		ch = 'a';
-		while (ch <= 'z')
-		{
-			_putchar(ch);
-			ch++;
-		}
+        char ch;
+        int i = 0;
 
-		_putchar('\n');
-		i++;
-	}
+        while (i < 10)
+        {
+                ch = 'a';
+                while (ch <= 'z')
+                {
+                        _putchar(ch);
+                        ch++;
+                }
+
+                _putchar('\n');
+                i++;
+        }
 }
