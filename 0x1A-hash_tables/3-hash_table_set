@@ -1,0 +1,44 @@
+#include "hash_tables.h"
+/**
+ * hash_table_set - Adds an element to the hash_table
+ * @key: Variable tobe added to the hash table
+ * @value: variable associated with the key
+ * Return: 1 on succes, 0 on failure
+ */
+
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
+{
+	unsigned long int size = ht -> size;
+	unsigned long int index;
+	hash_node_t *array_ele;
+	hash_node_t *node = hash_node(key, value);
+
+	if ((strcmp(key , "") == 0) || key == NULL)
+        {
+                perror("Key cannot be empty");
+                return (0);
+        }
+	strcpy(node->key, key);
+	strcpy(node->value, value);
+    	index = key_index((unsigned char *)node->key, size);
+    	array_ele = ht->array[index];
+    	if (array_ele == NULL)
+    	{
+        	ht->array[index]= node;
+        	return (1);
+    	}
+    	else
+    	{
+        	if (strcmp(ht->array[index]->key, key) == 0){
+            		strcpy(ht->array[index]->value, value);
+			return (1);
+		}
+        	else
+		{
+			while (array_ele->next != NULL)
+				array_ele = array_ele->next;
+			array_ele->next = node;
+			return (1);
+		}
+	}
+}
