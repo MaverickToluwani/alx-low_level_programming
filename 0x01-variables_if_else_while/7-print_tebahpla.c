@@ -9,10 +9,10 @@ int main(void)
 {
 	char L_alp = 'z';
 
-	while (L_alp > 'a')
+	while (L_alp >= 'a')
 	{
-		L_alp--;
 		putchar(L_alp);
+		L_alp--;
 	}
 	putchar('\n');
 	return (0);
