@@ -11,7 +11,7 @@ void fib_generator(int n)
 	start = 1;
 	next = 2;
 	printf("%ld, %ld, ", start, next);
-	for (i = 3; i <= n; i++)
+	for (i = 0; i <= n; i++)
 	{
 		cur = start + next;
 		printf("%ld", cur);
