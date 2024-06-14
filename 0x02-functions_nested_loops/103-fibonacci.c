@@ -2,11 +2,11 @@
 
 /**
  * fib_generator - print the first n Fibonacci numbers
- * @n: number of fibanacci numbers to be printed
  */
 void fib_generator(void)
 {
 	long int i, start, next, cur, n, sum;
+
 	sum = 0;
 	start = 1;
 	next = 2;
