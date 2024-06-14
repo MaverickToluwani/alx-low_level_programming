@@ -6,15 +6,15 @@
  */
 void fib_generator(int n)
 {
-	long long int i, start, next, cur;
+	int i, start, next, cur;
 
 	start = 1;
 	next = 2;
-	printf("%lld, %lld, ", start, next);
+	printf("%d, %d, ", start, next);
 	for (i = 0; i <= n; i++)
 	{
 		cur = start + next;
-		printf("%lld", cur);
+		printf("%d", cur);
 		if (i != n)
 			printf(", ");
 		start = next;
